@@ -1,0 +1,46 @@
+<div id="house-selection" class="container">
+  <div class="row house-selection" ng-if="!user.house">
+    <div class="col-xs-6 col-xs-offset-3 greeting">
+      <form ng-submit="makeChoice()" novalidate ng-if="cycling">
+        <div class="form-group">
+          <label for="password"><h2>Valar Morgulis</h2></label>
+          <div class="input-group col-xs-6 col-xs-offset-3">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary" ng-disabled="disableButton">reply: </button>
+            </span>
+            <input class="form-control" type="text" name="password" ng-model="form.response" ng-change="checkValidity()">
+          </div>
+        </div>
+      </form>
+      <div class="welcome" ng-if="showWelcome">
+        <h2>Welcome, {{user.name}}</h2>
+        <a ui-sref="overview" ng-if="houseSelected">view the other houses</a>
+      </div>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+  <div class="row house-selection" ng-if="!user.house">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div id="house-logo-wrapper">
+        <div class="align-center">
+          <div id="house-logo" ng-animate="'animate'" ng-repeat="house in houseList.houses" class="{{house.name}}" ng-if="house.visible"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 strategies" ng-if="selectedHouse">
+      <h4>You are House {{selectedHouse.name}}</h4>
+      <h5>Strengths</h5>
+      <ul>
+        <li ng-repeat="strength in selectedHouse.strategies.strengths">
+          <p ng-bind-html="strength"></p>
+        </li>
+      </ul>
+      <h5>Weaknesses</h5>
+      <ul>
+        <li ng-repeat="weakness in selectedHouse.strategies.weaknesses">
+          <p ng-bind-html="weakness"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

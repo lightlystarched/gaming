@@ -1,0 +1,114 @@
+
+@import "bootstrap/variables";
+
+#house-selection {
+	background: url(../images/iron_throne.jpg) 0 0 no-repeat;
+    background-size: cover;
+    min-height: 100%;
+
+    .strategies {
+    	font-family: $font-family-sans-serif;
+    	h5 {
+    		text-decoration: underline;
+    	}
+    }
+}
+
+.house-selection {
+	.greeting {
+		margin-top: 25px;
+		text-align: center;
+		min-height: 120px;
+		margin-bottom: 15px;
+		.ng-enter, 
+		.ng-leave { 
+		    -webkit-transition: 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+		    -moz-transition: 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+		    -ms-transition: 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+		    -o-transition: 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+		    transition: 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+		} 
+		 
+		.ng-leave.ng-leave-active,
+		.ng-enter {
+		    opacity: 0;
+		}        
+		 
+		.ng-enter.ng-enter-active,
+		.ng-leave {
+		    opacity: 1;
+		}
+	}
+}
+
+#house-logo-wrapper {
+	width: 199px;
+	height: 430px;
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	.align-center {
+		position: relative;
+		margin: 0 auto;
+		height: 100%;
+		#house-logo {
+			background: url(../images/crests.png) 0 -320px no-repeat;
+			width: 199px;
+			height: 100%;
+			border-radius: 15px;
+			position: absolute;
+			border: 3px solid #000;
+			-webkit-box-shadow: 0px 3px 33px 0px rgba(0,0,0,0.71);
+			-moz-box-shadow: 0px 3px 33px 0px rgba(0,0,0,0.71);
+			box-shadow: 0px 3px 33px 0px rgba(0,0,0,0.71);
+			&.Lannister {
+				background-position: -400px -320px;
+			}
+			&.Greyjoy {
+				background-position: -201px -320px;
+			}
+			&.Baratheon {
+				background-position: -600px -320px;
+			}
+			&.Tyrell {
+				background-position: -800px -320px;
+			}
+			&.Martell {
+				background-position: -1000px -320px;
+			}
+		}
+	}
+	
+	.ng-enter, 
+	.ng-leave { 
+	    -webkit-transition: 150ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+	    -moz-transition: 150ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+	    -ms-transition: 150ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+	    -o-transition: 150ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+	    transition: 150ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+	    position: absolute;
+	    display: block;
+	} 
+	 
+	.ng-leave.ng-leave-active,
+	.ng-enter {
+	    -webkit-transform: rotateY(180deg);
+	    -moz-transform: rotateY(180deg);
+	    -ms-transform: rotateY(180deg);
+	    -o-transform: rotateY(180deg);
+	    transform: rotateY(180deg);
+	    opacity: 0;
+	    height: 0px;
+	}        
+	 
+	.ng-enter.ng-enter-active,
+	.ng-leave {
+	    -webkit-transform: rotateY(0deg);
+	    -moz-transform: rotateY(0deg);
+	    -ms-transform: rotateY(0deg);
+	    -o-transform: rotateY(0deg);
+	    transform: rotateY(0deg);
+	    opacity: 1;
+	    height: 30px;
+	}
+}

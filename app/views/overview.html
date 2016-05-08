@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			&nbsp;
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-5">
+			<a ui-sref="selector">&lt; Back</a>
+		</div>
+		<div class="col-xs-4">
+			<a href="http://joshuamartin.com/AGoT/images/starting-positions.jpg" target="_blank">View Starting Positions</a>
+		</div>
+	</div>
+	<div class="row" id="overview">
+		<div class="col-xs-2 house" ng-repeat="house in houseList.houses" ng-class="house.name">
+			<h4>{{house.player.name}}</h4>
+			<a ng-href="https://mail.google.com/mail/?view=cm&fs=1&to={{house.player.email}}" ng-if="house.player.name !== user.name && house.player !== ''" target="_blank">Send a Raven</a>
+		</div>
+	</div>
+</div>

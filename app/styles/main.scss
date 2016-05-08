@@ -1,0 +1,77 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "bootstrap";
+@import "houses.scss";
+
+@import "bootstrap/variables";
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+#content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#the-wall {
+  background: url(../images/the_wall.png) 0 0 no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+#overview {
+  background: url(../images/crests.png) 0 0 no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  min-height: 1200px;
+  .house {
+    text-align: center;
+    h4 {
+      margin-top: 25px;
+    }
+    &.Martell {
+      color: $martell;
+      a {
+        color: $martell;
+      }
+    }
+    &.Tyrell {
+      color: $tyrell;
+      a {
+        color: $tyrell;
+      }
+    }
+    &.Lannister, a {
+      color: $lannister;
+      a {
+        color: $lannister;
+      }
+    }
+    &.Stark, a {
+      color: $stark;
+      a {
+        color: $stark;
+      }
+    }
+    &.Baratheon, a {
+      color: $baratheon;
+      a {
+        color: $baratheon;
+      }
+    }
+    &.Greyjoy, a {
+      color: $greyjoy;
+      a {
+        color: $greyjoy;
+      }
+    }
+  }
+}
